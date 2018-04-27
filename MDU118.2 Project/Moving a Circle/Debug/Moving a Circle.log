@@ -2,12 +2,16 @@
   App.cpp
 c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(94): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(249): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(261): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(273): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(291): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(324): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(358): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(521): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(472): warning C4101: 'str': unreferenced local variable
+c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(233): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(245): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(257): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(275): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(308): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(342): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(505): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\admin local\documents\github\brick-breaker-level-editor\mdu118.2 project\moving a circle\app.cpp(456): warning C4101: 'str': unreferenced local variable
+  Generating Code...
+  Compiling...
+  Main.cpp
+  Generating Code...
   Moving a Circle.vcxproj -> C:\Users\Admin Local\Documents\GitHub\Brick-Breaker-Level-Editor\MDU118.2 Project\Debug\Level Editor.exe
