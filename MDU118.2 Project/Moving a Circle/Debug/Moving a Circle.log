@@ -1,0 +1,13 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (Moving a Circle.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  App.cpp
+c:\users\admin local\desktop\uni\mdu118\mdu118.2 project\moving a circle\app.cpp(94): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\admin local\desktop\uni\mdu118\mdu118.2 project\moving a circle\app.cpp(114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\admin local\desktop\uni\mdu118\mdu118.2 project\moving a circle\app.cpp(249): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\admin local\desktop\uni\mdu118\mdu118.2 project\moving a circle\app.cpp(261): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\admin local\desktop\uni\mdu118\mdu118.2 project\moving a circle\app.cpp(273): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\admin local\desktop\uni\mdu118\mdu118.2 project\moving a circle\app.cpp(291): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\admin local\desktop\uni\mdu118\mdu118.2 project\moving a circle\app.cpp(324): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\admin local\desktop\uni\mdu118\mdu118.2 project\moving a circle\app.cpp(358): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\admin local\desktop\uni\mdu118\mdu118.2 project\moving a circle\app.cpp(521): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\admin local\desktop\uni\mdu118\mdu118.2 project\moving a circle\app.cpp(472): warning C4101: 'str': unreferenced local variable
+  Moving a Circle.vcxproj -> C:\Users\Admin Local\Desktop\Uni\MDU118\MDU118.2 Project\Debug\Level Editor.exe

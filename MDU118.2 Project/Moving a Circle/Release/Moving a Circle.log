@@ -1,0 +1,13 @@
+﻿  Moving a Circle.cpp
+Moving a Circle.cpp(27): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+Moving a Circle.cpp(27): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+Moving a Circle.cpp(55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+Moving a Circle.cpp(62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+Moving a Circle.cpp(135): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+Moving a Circle.cpp(136): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Generating code
+  1 of 43 functions ( 2.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Moving a Circle.vcxproj -> c:\users\admin local\source\repos\Week 08 Solution\Release\Moving a Circle.exe
