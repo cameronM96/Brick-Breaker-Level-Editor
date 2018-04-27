@@ -2,6 +2,7 @@
 
 //#ifndef APP_H
 #define APP_H
+#define _WINNT_WIN32 0600
 
 #include "stdafx.h"
 #include <SFML/Graphics.hpp>

@@ -117,10 +117,6 @@ void App::Update()
 		if (newBricks[currentBrickNumber]->getPosition().x <= 0)
 		{
 			collisionDetected = true;
-			// Move brick
-			/*newBricks[currentBrickNumber]->setPosition(
-				0,
-				newBricks[currentBrickNumber]->getPosition().y);*/
 		}
 
 		// Right border collision detection
@@ -128,20 +124,12 @@ void App::Update()
 			window.getSize().x - border2.getSize().x - newBricks[currentBrickNumber]->getSize().x)
 		{
 			collisionDetected = true;
-			// Move brick
-			/*newBricks[currentBrickNumber]->setPosition(
-				window.getSize().x - border2.getSize().x - newBricks[currentBrickNumber]->getSize().x,
-				newBricks[currentBrickNumber]->getPosition().y);*/
 		}
 
 		// Top border collision detection
 		if (newBricks[currentBrickNumber]->getPosition().y <= border1.getSize().y)
 		{
 			collisionDetected = true;
-			// Move brick
-			/*newBricks[currentBrickNumber]->setPosition(
-				newBricks[currentBrickNumber]->getPosition().x,
-				border1.getSize().y);*/
 		}
 
 		// Bottom border collision detection
@@ -149,10 +137,6 @@ void App::Update()
 			window.getSize().y - newBricks[currentBrickNumber]->getSize().y)
 		{
 			collisionDetected = true;
-			// Move brick
-			/*newBricks[currentBrickNumber]->setPosition(
-				newBricks[currentBrickNumber]->getPosition().x,
-				window.getSize().y - newBricks[currentBrickNumber]->getSize().y);*/
 		}
 
 		// Detect collision with other bricks
@@ -526,42 +510,6 @@ bool App::ReadFromFile()
 	}
 	cout << endl << endl << endl;
 	
-	//loop until the end of file is reached
-	//for (int i = 0; i < MAXBRICKS + 1; i++)
-	//{
-	//	if (i != 0)
-	//	{
-	//		infile.getline(str, 255);
-
-	//		//TODO:Beta Version (read the values from the string and create rectangles and apply the values to them)
-	//		// Read from file
-	//		//istringstream (str) >> number;
-	//		number = str[6*(i+1)];
-	//		xposition = str[7 * (i + 1)];
-	//		yposition = str[8 * (i + 1)];
-	//		rcolor = str[9 * (i + 1)];
-	//		gcolor = str[10 * (i + 1)];
-	//		bcolor = str[11 * (i + 1)];
-
-	//		cout << "Index: " << number <<
-	//			"\tPosition: (" << xposition << "," << yposition <<
-	//			")\tColor: (" << rcolor << "," << gcolor << "," << bcolor << ")" << endl;
-	//		
-	//		// Recreate bricks
-	//		sf::RectangleShape oldbrick(sf::Vector2f(100, 50));
-	//		oldbrick.setPosition(xposition, yposition);
-	//		oldbrick.setFillColor(sf::Color(rcolor, gcolor, bcolor, 255));
-	//		newBricks[number] = &oldbrick;
-
-	//		// Output the data that has just been read in.
-	//		cout << str << endl << endl;
-	//	}
-	//	else
-	//	{
-	//		infile.getline(str, 255);
-	//	}
-	//}
-
 	cout << "File has be loaded" << endl;
 
 	return true;
@@ -613,3 +561,4 @@ int App::SetBackground()
 	}
 	return 0;
 }
+
