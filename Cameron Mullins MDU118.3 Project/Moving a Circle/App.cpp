@@ -199,6 +199,7 @@ void App::Update()
 			}
 		}
 
+		// Resolve collisions
 		if (collisionDetected)
 		{
 			newBricks[currentBrickNumber]->setOutlineColor(sf::Color::Red);
@@ -284,6 +285,7 @@ void App::HandleEvents()
 			//clicking the new button
 			if (newButton.getGlobalBounds().contains(localMousePosition.x, localMousePosition.y))
 			{
+				// Remove all bricks from window
 				for (int i = 0; i < MAXBRICKS; i++)
 				{
 					newBricks[i] = nullptr;
@@ -550,6 +552,7 @@ bool App::ReadFromFile()
 			// Recreate bricks
 			AddBrick(new sf::RectangleShape(sf::Vector2f(100, 50)),sf::Color(rcolor,gcolor,bcolor,255),&number);
 			newBricks[number]->setPosition(xposition, yposition);
+			newBricks[number]->setOutlineColor(sf::Color(rcolor, gcolor, bcolor));
 			cout << endl << "Brick Recreated!" << endl;
 		}
 

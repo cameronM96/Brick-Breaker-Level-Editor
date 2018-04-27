@@ -2,19 +2,18 @@
   App.cpp
 App.cpp(134): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 App.cpp(154): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-App.cpp(285): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-App.cpp(294): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-App.cpp(302): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-App.cpp(310): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-App.cpp(324): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-App.cpp(353): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-App.cpp(389): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-App.cpp(552): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-App.cpp(503): warning C4101: 'str': unreferenced local variable
-  Main.cpp
+App.cpp(286): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+App.cpp(296): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+App.cpp(304): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+App.cpp(312): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+App.cpp(326): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+App.cpp(355): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+App.cpp(391): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+App.cpp(554): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+App.cpp(505): warning C4101: 'str': unreferenced local variable
   Generating code
-  10 of 264 functions ( 3.8%) were compiled, the rest were copied from previous compilation.
+  3 of 264 functions ( 1.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    4 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Moving a Circle.vcxproj -> C:\Users\Admin Local\Documents\GitHub\Brick-Breaker-Level-Editor\Cameron Mullins MDU118.3 Project\Release\Level Editor.exe
