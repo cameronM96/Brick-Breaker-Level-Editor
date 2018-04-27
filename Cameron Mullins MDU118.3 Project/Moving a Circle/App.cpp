@@ -97,6 +97,36 @@ bool App::Init()
 	backgroundText.setFillColor(sf::Color::Black);
 	backgroundText.setPosition(loadBackground.getPosition());
 
+	editorBrick1Text.setFont(font);
+	editorBrick1Text.setString("Health: 1");
+	editorBrick1Text.setCharacterSize(18);
+	editorBrick1Text.setFillColor(sf::Color::Black);
+	editorBrick1Text.setPosition(editorBricks[0].getPosition());
+
+	editorBrick2Text.setFont(font);
+	editorBrick2Text.setString("Health: 2");
+	editorBrick2Text.setCharacterSize(18);
+	editorBrick2Text.setFillColor(sf::Color::Black);
+	editorBrick2Text.setPosition(editorBricks[1].getPosition());
+
+	editorBrick3Text.setFont(font);
+	editorBrick3Text.setString("Health: 3");
+	editorBrick3Text.setCharacterSize(18);
+	editorBrick3Text.setFillColor(sf::Color::Black);
+	editorBrick3Text.setPosition(editorBricks[2].getPosition());
+
+	editorBrick4Text.setFont(font);
+	editorBrick4Text.setString("Health: 4");
+	editorBrick4Text.setCharacterSize(18);
+	editorBrick4Text.setFillColor(sf::Color::Black);
+	editorBrick4Text.setPosition(editorBricks[3].getPosition());
+
+	editorBrick5Text.setFont(font);
+	editorBrick5Text.setString("Health: 5");
+	editorBrick5Text.setCharacterSize(18);
+	editorBrick5Text.setFillColor(sf::Color::Black);
+	editorBrick5Text.setPosition(editorBricks[4].getPosition());
+
 	// Initialise defaults for editor buttons
 	for (int i = 0; i < NUMBEROFRECTS; ++i)
 	{
@@ -210,6 +240,13 @@ void App::Draw()
 	{
 		window.draw(editorBricks[i]);
 	}
+
+	// Draw editor brick text
+	window.draw(editorBrick1Text);
+	window.draw(editorBrick2Text);
+	window.draw(editorBrick3Text);
+	window.draw(editorBrick4Text);
+	window.draw(editorBrick5Text);
 
 	// draw bricks
 	for (int i = 0; i < MAXBRICKS; i++)

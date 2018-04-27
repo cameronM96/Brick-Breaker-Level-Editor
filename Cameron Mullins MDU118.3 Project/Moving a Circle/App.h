@@ -29,6 +29,11 @@ private:
 	sf::Text saveText;
 	sf::Text loadText;
 	sf::Text backgroundText;
+	sf::Text editorBrick1Text;
+	sf::Text editorBrick2Text;
+	sf::Text editorBrick3Text;
+	sf::Text editorBrick4Text;
+	sf::Text editorBrick5Text;
 
 	sf::View			view;
 	sf::RenderWindow	window;
