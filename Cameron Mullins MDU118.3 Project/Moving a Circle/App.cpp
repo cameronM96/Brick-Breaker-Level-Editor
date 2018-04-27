@@ -4,6 +4,7 @@
 using namespace std;
 
 //Create menu buttons and variables
+sf::RectangleShape newButton(sf::Vector2f(100, 50));
 sf::RectangleShape saveButton(sf::Vector2f(100, 50));
 sf::RectangleShape loadButton(sf::Vector2f(100, 50));
 sf::RectangleShape loadBackground(sf::Vector2f(100, 50));
@@ -50,14 +51,17 @@ bool App::Init()
 	// Initialise Background
 	SetBackground();
 
-	// initialise Menu Interface (buttons & borders)	
-	saveButton.setPosition(100, 5);
+	// initialise Menu Interface (buttons & borders)
+	newButton.setPosition(50, 5);
+	newButton.setFillColor(sf::Color(200, 200, 200, 255));
+
+	saveButton.setPosition(200, 5);
 	saveButton.setFillColor(sf::Color(200, 200, 200, 255));
 	
-	loadButton.setPosition(250, 5);
+	loadButton.setPosition(350, 5);
 	loadButton.setFillColor(sf::Color(200, 200, 200, 255));
 	
-	loadBackground.setPosition(400, 5);
+	loadBackground.setPosition(500, 5);
 	loadBackground.setFillColor(sf::Color(200, 200, 200, 255));
 	
 	border1.setFillColor(sf::Color(100, 100, 100, 255));
@@ -69,6 +73,12 @@ bool App::Init()
 	{
 		//SFML will post an error in the console if font can't be loaded.
 	}
+	newText.setFont(font);
+	newText.setString("New");
+	newText.setCharacterSize(20);
+	newText.setFillColor(sf::Color::Black);
+	newText.setPosition(newButton.getPosition());
+
 	saveText.setFont(font);
 	saveText.setString("Save");
 	saveText.setCharacterSize(20);
@@ -120,7 +130,7 @@ void App::Update()
 		}
 
 		// Right border collision detection
-		if (newBricks[currentBrickNumber]->getPosition().x >= 
+		if (newBricks[currentBrickNumber]->getPosition().x >=
 			window.getSize().x - border2.getSize().x - newBricks[currentBrickNumber]->getSize().x)
 		{
 			collisionDetected = true;
@@ -133,7 +143,7 @@ void App::Update()
 		}
 
 		// Bottom border collision detection
-		if (newBricks[currentBrickNumber]->getPosition().y >= 
+		if (newBricks[currentBrickNumber]->getPosition().y >=
 			window.getSize().y - newBricks[currentBrickNumber]->getSize().y)
 		{
 			collisionDetected = true;
@@ -184,11 +194,13 @@ void App::Draw()
 	window.draw(background);
 	window.draw(border1);
 	window.draw(border2);
+	window.draw(newButton);
 	window.draw(saveButton);
 	window.draw(loadButton);
 	window.draw(loadBackground);
 	
 	// draw text
+	window.draw(newText);
 	window.draw(saveText);
 	window.draw(loadText);
 	window.draw(backgroundText);
@@ -229,53 +241,50 @@ void App::HandleEvents()
 		//TODO: for all elements in Menu Interactions, when buttons are pressed find files using windows explorer 
 		//	instead of typing file names and having to put the files in the same folder as the project
 
-		//clicking the save button
-		if (saveButton.getGlobalBounds().contains(localMousePosition.x, localMousePosition.y))
+		// On Button Down check
+		if (event.type == event.MouseButtonPressed)
 		{
-			// onbutton down
-			if (save)
+			//clicking the new button
+			if (newButton.getGlobalBounds().contains(localMousePosition.x, localMousePosition.y))
 			{
-				save = false;
+				for (int i = 0; i < MAXBRICKS; i++)
+				{
+					newBricks[i] = nullptr;
+				}
+			}
+
+			//clicking the save button
+			if (saveButton.getGlobalBounds().contains(localMousePosition.x, localMousePosition.y))
+			{
+				save = true;
 				//save the level to a file
 				WriteToFile();
 			}
-		}
 
-		//clicking the load button
-		if (loadButton.getGlobalBounds().contains(localMousePosition.x, localMousePosition.y))
-		{
-			// onbutton down
-			if (load)
+			//clicking the load button
+			if (loadButton.getGlobalBounds().contains(localMousePosition.x, localMousePosition.y))
 			{
-				load = false;
+				load = true;
 				//load the level
 				ReadFromFile();
 			}
-		}
 
-		//clicking the background button
-		if (loadBackground.getGlobalBounds().contains(localMousePosition.x, localMousePosition.y))
-		{
-			// onbutton down
-			if (changeBackground)
+			//clicking the background button
+			if (loadBackground.getGlobalBounds().contains(localMousePosition.x, localMousePosition.y))
 			{
-				changeBackground = false;
+				changeBackground = true;
 				//change the background
 				cout << "Type in the full name of the background file, including the .filetype." << endl;
 				cout << "Also be sure to put the background image file in the same folder as the Main.cpp file." << endl;
 				cin >> backgroundname;
 				SetBackground();
 			}
-		}
 
-		//Create bricks
-		for (int i = 0; i < NUMBEROFRECTS; i++)
-		{
-			// Check if the editor bricks were pressed
-			if (editorBricks[i].getGlobalBounds().contains(localMousePosition.x, localMousePosition.y))
+			//Create bricks
+			for (int i = 0; i < NUMBEROFRECTS; i++)
 			{
-				//onbuttondown check
-				if (createBrick)
+				// Check if the editor bricks were pressed
+				if (editorBricks[i].getGlobalBounds().contains(localMousePosition.x, localMousePosition.y))
 				{
 					// Create a moveable bring with the same settings as the editor brick
 					sf::Color editorBrickColor;
@@ -297,17 +306,17 @@ void App::HandleEvents()
 					createBrick = false;
 				}
 			}
-		}
 
-		// Check if user is clicking on an already existing brick
-		for (int i = 0; i < MAXBRICKS; i++)
-		{
-			if (newBricks[i] != nullptr)
+			// Check if user is clicking on an already existing brick
+			for (int i = 0; i < MAXBRICKS; i++)
 			{
-				// If user clicks on a brick, set that brick as the currently selected brick;
-				if (newBricks[i]->getGlobalBounds().contains(localMousePosition.x,localMousePosition.y))
+				if (newBricks[i] != nullptr)
 				{
-					currentBrickNumber = i;
+					// If user clicks on a brick, set that brick as the currently selected brick;
+					if (newBricks[i]->getGlobalBounds().contains(localMousePosition.x, localMousePosition.y))
+					{
+						currentBrickNumber = i;
+					}
 				}
 			}
 		}
@@ -317,9 +326,10 @@ void App::HandleEvents()
 		// Allow the users to use onbuttondown events
 		changeColor = true;
 		createBrick = true;
-		save = true;
-		load = true;
-		changeBackground = true;
+		newPressed = false;
+		save = false;
+		load = false;
+		changeBackground = false;
 		leftMouseButton = false;
 	}
 

@@ -25,6 +25,7 @@ private:
 
 	//Menu Button Variables
 	sf::Font font;
+	sf::Text newText;
 	sf::Text saveText;
 	sf::Text loadText;
 	sf::Text backgroundText;
@@ -40,9 +41,10 @@ private:
 	bool changeColor = true;
 	bool createBrick = true;
 	bool deleteBrick = true;
-	bool save = true;
-	bool load = true;
-	bool changeBackground = true;
+	bool newPressed = false;
+	bool save = false;
+	bool load = false;
+	bool changeBackground = false;
 	bool leftMouseButton = false;
 	bool rightMouseButton = false;
 
